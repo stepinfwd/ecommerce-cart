@@ -12,7 +12,7 @@ Variables
 */
 
 :root {
-  --clr-primary: #189e7d;
+  --clr-primary: rgba(81, 6, 255, 0.76);
   --clr-primary-dark: hsl(205, 100%, 21%);
   --clr-primary-light: hsl(205, 84%, 74%);
   --clr-grey-1: #102a42;
@@ -147,9 +147,12 @@ nav svg {
 }
 .nav-header {
   /* border-left: 1px solid white; */
-  border-right: 10px solid white;
+  border-right: 10px solid rgb(6, 255, 102);
 
   border-top: 10px solid white;
+}
+.nav-header span {
+  /* color: rgba(81, 6, 255, 0.76); */
 }
 .amount-container {
   position: absolute;
@@ -256,8 +259,9 @@ Cart Item
   height: 5rem;
   object-fit: cover;
   border-radius: 100%;
-  padding: 0.2rem;
+  margin-left: 2rem;
 }
+
 .cart-item h4 {
   margin-bottom: 0.5rem;
   font-weight: 500;

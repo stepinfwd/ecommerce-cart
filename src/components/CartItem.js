@@ -1,6 +1,8 @@
 import React from "react";
+import { REMOVE } from "./actions";
+import { connect } from "react-redux";
 
-const CartItem = ({ img, title, price, amount }) => {
+const CartItem = ({ img, title, price, amount, remove }) => {
   return (
     <div className="cart-item">
       <img src={img} alt={title} />
@@ -8,7 +10,9 @@ const CartItem = ({ img, title, price, amount }) => {
         <h4>{title}</h4>
         <h4 className="item-price">${price}</h4>
         {/* remove button */}
-        <button className="remove-btn">remove</button>
+        <button onClick={() => remove()} className="remove-btn">
+          remove
+        </button>
       </div>
       <div className="inner-cart-container">
         {/* increase amount */}
@@ -29,5 +33,13 @@ const CartItem = ({ img, title, price, amount }) => {
     </div>
   );
 };
+const mapDispatchToProps = (dispatch, ownProps) => {
+  console.log("props", ownProps);
+  // console.log("disp", dispatch);
 
-export default CartItem;
+  return {
+    remove: () => dispatch({ type: REMOVE, payload: { id: ownProps.id } }),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(CartItem);
