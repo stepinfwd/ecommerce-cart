@@ -12,7 +12,7 @@ Variables
 */
 
 :root {
-  --clr-primary: #2680c0;
+  --clr-primary: #189e7d;
   --clr-primary-dark: hsl(205, 100%, 21%);
   --clr-primary-light: hsl(205, 84%, 74%);
   --clr-grey-1: #102a42;
@@ -145,6 +145,12 @@ nav svg {
   width: 2rem;
   fill: var(--clr-white);
 }
+.nav-header {
+  /* border-left: 1px solid white; */
+  border-right: 10px solid white;
+
+  border-top: 10px solid white;
+}
 .amount-container {
   position: absolute;
   top: -0.75rem;
@@ -218,11 +224,39 @@ Cart Item
   grid-template-columns: auto 1fr auto;
   grid-column-gap: 1.5rem;
   margin: 1.5rem 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) !important;
+  background-color: white !important;
+  border-radius: 6px !important;
+  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) !important;
+  color: #3d3d3d !important;
+  background-color: #eaeaea;
+  margin-bottom: 1.5rem !important;
+  height: auto !important;
+  border-radius: 4px !important;
+  letter-spacing: 0.01rem !important;
+  background-color: white !important;
+  padding-bottom: 1.5rem !important; */
 }
+.inner-cart-container {
+  padding: 2rem !important;
+}
+/* .cart > article {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) !important;
+  color: #3d3d3d !important;
+  background-color: #eaeaea;
+  margin-bottom: 5rem !important;
+  height: auto !important;
+  border-radius: 4px !important;
+  letter-spacing: 0.01rem !important;
+  background-color: wheat !important;
+  padding-bottom: 4rem !important;
+} */
 .cart-item img {
   width: 5rem;
   height: 5rem;
   object-fit: cover;
+  border-radius: 100%;
+  padding: 0.2rem;
 }
 .cart-item h4 {
   margin-bottom: 0.5rem;
@@ -250,6 +284,7 @@ Cart Item
   background: transparent;
   border: none;
   cursor: pointer;
+  /* margin-right: 0.5rem; */
 }
 .amount-btn svg {
   fill: var(--clr-primary);

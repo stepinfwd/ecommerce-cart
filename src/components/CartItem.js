@@ -4,13 +4,13 @@ const CartItem = ({ img, title, price, amount }) => {
   return (
     <div className="cart-item">
       <img src={img} alt={title} />
-      <div>
+      <div className="inner-cart-container">
         <h4>{title}</h4>
         <h4 className="item-price">${price}</h4>
         {/* remove button */}
         <button className="remove-btn">remove</button>
       </div>
-      <div>
+      <div className="inner-cart-container">
         {/* increase amount */}
         <button className="amount-btn">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
