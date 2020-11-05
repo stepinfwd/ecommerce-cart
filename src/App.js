@@ -14,8 +14,7 @@ import storeReducer from "./components/reducer";
 
 const initialStore = {
   cart: cartItems,
-  amount: 99,
-  total: 999,
+  total: 0,
 };
 // const storeReducer = (state = initialStore, action) => {
 //   console.log("ready", state);

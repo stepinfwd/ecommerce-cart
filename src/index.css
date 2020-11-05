@@ -145,12 +145,7 @@ nav svg {
   width: 2rem;
   fill: var(--clr-white);
 }
-.nav-header {
-  /* border-left: 1px solid white; */
-  border-right: 10px solid rgb(6, 255, 102);
 
-  border-top: 10px solid white;
-}
 .nav-header span {
   /* color: rgba(81, 6, 255, 0.76); */
 }

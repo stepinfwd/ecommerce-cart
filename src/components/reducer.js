@@ -11,7 +11,14 @@ export default function storeReducer(state, action) {
     console.log("poda", action.payload.id);
   }
   if (action.type === INCREASE) {
-    return { ...state, cart: [] };
+    let tempCart = state.cart.map((item) => {
+      console.log("itemis", item);
+      if (item.id === action.payload.id)
+        return { ...item, amount: action.payload.amount + 1 };
+      else return { ...item };
+    });
+
+    return { ...state, cart: tempCart };
   }
   if (action.type === DECREASE) {
     return { ...state, cart: [] };
